@@ -23,7 +23,7 @@ function App() {
           </body>
         </html>`
       );
-    }, 250);
+    }, 500);
 
     return () => clearTimeout(delayTimer);
   }, [htmlValue, jsValue, cssValue]);
