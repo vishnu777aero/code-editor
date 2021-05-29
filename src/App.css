@@ -1,17 +1,5 @@
 .pane.top-pane {
   display: flex;
-  justify-content: space-between;
   background-color: rgb(89, 100, 97);
   padding: 2px;
-}
-
-.editor {
-  flex: 0 1 33%;
-}
-
-.editor .header {
-  padding: 2px;
-  background-color: black;
-  color: white;
-  border-radius: 5px 5px 0 0;
 }
