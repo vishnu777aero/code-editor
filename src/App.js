@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import "./App.css";
 import { Editor } from "./Editor";
@@ -6,6 +7,26 @@ function App() {
   const [htmlValue, setHtmlValue] = useState("");
   const [jsValue, setJsValue] = useState("");
   const [cssValue, setCssValue] = useState("");
+
+  const [srcDoc, setSrcDoc] = useState("<html></html");
+
+  useEffect(() => {
+    const delayTimer = setTimeout(() => {
+      setSrcDoc(
+        `<html>
+          <head>
+          <style>${cssValue}</style>
+          </head>
+          <body>
+            ${htmlValue}
+            <script>${jsValue}</script>
+          </body>
+        </html>`
+      );
+    }, 250);
+
+    return () => clearTimeout(delayTimer);
+  }, [htmlValue, jsValue, cssValue]);
 
   const onChangeEditor = (editor, data, value) => {
     const { mode } = editor.options;
@@ -42,7 +63,7 @@ function App() {
         />
       </div>
       <div className="bottom-pane">
-        <iframe srcDoc="www.google.com" title="code-output"></iframe>
+        <iframe srcDoc={srcDoc} title="code-output"></iframe>
       </div>
     </>
   );
