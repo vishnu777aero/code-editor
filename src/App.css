@@ -8,6 +8,16 @@ html {
   height: 100vh;
 }
 
+.heading {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heading > h1 {
+  margin: auto;
+}
+
 .top-pane {
   display: flex;
   background-color: rgb(89, 100, 97);

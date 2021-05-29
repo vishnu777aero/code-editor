@@ -40,8 +40,22 @@ function App() {
     }
   };
 
+  const onRefresh = () => {
+    setHtmlValue("");
+    setJsValue("");
+    setCssValue("");
+  };
+
+  const heading = (
+    <div className="heading">
+      <h1>Code Editor</h1>
+      <button onClick={onRefresh}>Refresh</button>
+    </div>
+  );
+
   return (
     <>
+      {heading}
       <div className="top-pane">
         <Editor
           mode="xml"
