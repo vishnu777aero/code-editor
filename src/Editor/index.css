@@ -1,6 +1,16 @@
 .editor {
   flex: 1 0 100px;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.react-codemirror2 {
+  flex-grow: 1;
+}
+
+.CodeMirror {
+  height: 100%;
 }
 
 .editor.collapse {
