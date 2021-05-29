@@ -1,5 +1,6 @@
 .editor {
-  flex: 1 0 100px;
+  flex: 1 0;
+  width: 30%;
   margin: 5px;
   display: flex;
   flex-direction: column;
@@ -15,6 +16,7 @@
 
 .editor.collapse {
   flex-grow: 0;
+  width: 100px;
 }
 
 .editor .header {
