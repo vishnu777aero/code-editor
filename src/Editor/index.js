@@ -4,6 +4,7 @@ import "./index.css";
 
 import { Controlled as ControlledEditor } from "react-codemirror2";
 import { useRef } from "react";
+import { useState } from "react";
 
 export const Editor = ({ value, onBeforeChange, className, mode, name }) => {
   const options = {
@@ -13,15 +14,19 @@ export const Editor = ({ value, onBeforeChange, className, mode, name }) => {
   };
 
   const editorRef = useRef();
+  const [resizeButtonText, setResizeButtonText] = useState("collapse");
 
-  const onResize = () => {
+  const onResize = (event) => {
     editorRef.current.classList.toggle("collapse");
+    const buttonText =
+      event.target.innerHTML === "collapse" ? "expand" : "collapse";
+    setResizeButtonText(buttonText);
   };
 
   const header = (
     <div className="header">
       <span>{name}</span>
-      <button onClick={onResize}>EC</button>
+      <button onClick={onResize}>{resizeButtonText}</button>
     </div>
   );
 
