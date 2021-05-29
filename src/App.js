@@ -10,7 +10,7 @@ function App() {
   const onChangeEditor = (editor, data, value) => {
     const { mode } = editor.options;
 
-    if (mode === "html") {
+    if (mode === "xml") {
       setHtmlValue(value);
     } else if (mode === "javascript") {
       setJsValue(value);
@@ -23,7 +23,7 @@ function App() {
     <>
       <div className="pane top-pane">
         <Editor
-          mode="html"
+          mode="xml"
           name="HTML"
           onBeforeChange={onChangeEditor}
           value={htmlValue}

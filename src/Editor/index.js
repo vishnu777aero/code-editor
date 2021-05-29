@@ -6,6 +6,10 @@ import { Controlled as ControlledEditor } from "react-codemirror2";
 import { useRef } from "react";
 import { useState } from "react";
 
+import "codemirror/mode/xml/xml";
+import "codemirror/mode/javascript/javascript";
+import "codemirror/mode/css/css";
+
 export const Editor = ({ value, onBeforeChange, className, mode, name }) => {
   const options = {
     mode,
