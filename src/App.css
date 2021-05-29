@@ -1,8 +1,27 @@
-.pane.top-pane {
+html {
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top-pane {
   display: flex;
   background-color: rgb(89, 100, 97);
   padding: 2px;
-  height: 50vh;
+  flex: 1 1 50%;
+}
+
+.bottom-pane {
+  flex: 1 1 50%;
+}
+
+.bottom-pane iframe {
+  width: 100%;
+  height: 100%;
 }
 
 @font-face {

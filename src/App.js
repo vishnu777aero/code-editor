@@ -42,7 +42,7 @@ function App() {
 
   return (
     <>
-      <div className="pane top-pane">
+      <div className="top-pane">
         <Editor
           mode="xml"
           name="HTML"
