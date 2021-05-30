@@ -11,7 +11,18 @@ html {
 .heading {
   padding: 5px;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
+}
+
+.heading .trash-icon {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.heading .trash-icon:hover {
+  color: red;
 }
 
 .heading > .title {

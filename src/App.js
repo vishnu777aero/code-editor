@@ -5,7 +5,7 @@ import { Editor } from "./Editor";
 import { useLocalStorage } from "./_hooks/useLocalStorage";
 import { faHtml5, faCss3Alt, faJs } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [htmlValue, setHtmlValue] = useLocalStorage("html", "");
@@ -56,7 +56,11 @@ function App() {
         <h1>Code Editor</h1>
         <FontAwesomeIcon icon={faCode} />
       </span>
-      <button onClick={onRefresh}>Refresh</button>
+      <FontAwesomeIcon
+        className="trash-icon"
+        icon={faTrash}
+        onClick={onRefresh}
+      />
     </div>
   );
 
