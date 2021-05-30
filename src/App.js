@@ -65,16 +65,16 @@ function App() {
           value={htmlValue}
         />
         <Editor
-          mode="javascript"
-          name="JS"
-          onBeforeChange={onChangeEditor}
-          value={jsValue}
-        />
-        <Editor
           mode="css"
           name="CSS"
           onBeforeChange={onChangeEditor}
           value={cssValue}
+        />
+        <Editor
+          mode="javascript"
+          name="JS"
+          onBeforeChange={onChangeEditor}
+          value={jsValue}
         />
       </div>
       <div className="bottom-pane">
