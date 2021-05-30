@@ -6,6 +6,7 @@ html {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow: auto;
 }
 
 .heading {
@@ -42,6 +43,16 @@ html {
   background-color: rgb(89, 100, 97);
   padding: 2px;
   flex: 1 1 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .top-pane {
+    flex-direction: column;
+  }
+
+  .editor {
+    width: unset !important;
+  }
 }
 
 .bottom-pane {
