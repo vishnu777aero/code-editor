@@ -9,13 +9,20 @@ html {
 }
 
 .heading {
-  padding: 10px;
+  padding: 5px;
   display: flex;
   justify-content: flex-end;
 }
 
-.heading > h1 {
+.heading > .title {
   margin: auto;
+  display: flex;
+  align-items: baseline;
+}
+
+.title svg {
+  margin-left: 1rem;
+  font-size: 1.5rem;
 }
 
 .top-pane {
