@@ -13,6 +13,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  user-select: none;
 }
 
 .heading .trash-icon {
