@@ -29,6 +29,10 @@
   user-select: none;
 }
 
+.editor .header .language-name {
+  margin-left: auto;
+}
+
 .editor .header .resize-button {
   margin-left: auto;
   cursor: pointer;

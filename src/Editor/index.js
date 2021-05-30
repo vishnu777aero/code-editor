@@ -12,7 +12,14 @@ import "codemirror/mode/css/css";
 import { faCompressAlt, faExpandAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const Editor = ({ value, onBeforeChange, className, mode, name }) => {
+export const Editor = ({
+  value,
+  onBeforeChange,
+  className,
+  mode,
+  name,
+  icon,
+}) => {
   const options = {
     mode,
     theme: "material",
@@ -38,7 +45,10 @@ export const Editor = ({ value, onBeforeChange, className, mode, name }) => {
 
   const header = (
     <div className="header">
-      <span>{name}</span>
+      <div className="language-icon">
+        <FontAwesomeIcon icon={icon} />
+      </div>
+      <span className="language-name">{name}</span>
       <div className="resize-button" onClick={onResize}>
         {resizeButtonIcon}
       </div>

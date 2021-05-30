@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import { Editor } from "./Editor";
 import { useLocalStorage } from "./_hooks/useLocalStorage";
+import { faHtml5, faCss3Alt, faJs } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   const [htmlValue, setHtmlValue] = useLocalStorage("html", "");
@@ -61,18 +62,21 @@ function App() {
         <Editor
           mode="xml"
           name="HTML"
+          icon={faHtml5}
           onBeforeChange={onChangeEditor}
           value={htmlValue}
         />
         <Editor
           mode="css"
           name="CSS"
+          icon={faCss3Alt}
           onBeforeChange={onChangeEditor}
           value={cssValue}
         />
         <Editor
           mode="javascript"
           name="JS"
+          icon={faJs}
           onBeforeChange={onChangeEditor}
           value={jsValue}
         />
